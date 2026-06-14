@@ -115,4 +115,13 @@
         android:textSize="14sp"
         android:gravity="center" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Made by Rahul Acharjee, Cell-01711428936"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:gravity="center" />
+
 </LinearLayout>
