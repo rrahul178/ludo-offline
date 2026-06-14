@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFF3E0"
     android:padding="8dp">
 
     <TextView
@@ -11,39 +13,40 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:textColor="#5D4037"
         android:gravity="center"
-        android:padding="8dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
         android:text="Waiting..." />
 
     <com.example.ludo.LudoBoardView
         android:id="@+id/boardView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="8dp">
+        android:padding="12dp">
 
-        <TextView
-            android:id="@+id/tvDice"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:background="#EEEEEE"
-            android:text="-" />
+        <com.example.ludo.DiceView
+            android:id="@+id/diceView"
+            android:layout_width="64dp"
+            android:layout_height="64dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRoll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Roll Dice 🎲" />
+            android:layout_marginStart="20dp"
+            android:text="Roll Dice 🎲"
+            app:cornerRadius="24dp"
+            android:backgroundTint="#5D4037" />
     </LinearLayout>
 
 </LinearLayout>
+
