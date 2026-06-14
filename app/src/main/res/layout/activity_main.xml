@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎲 Ludo Offline"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="হোস্ট হলে নিজের ফোনের হটস্পট অন করুন। অন্যরা সেই হটস্পটে কানেক্ট করে হোস্টের IP দিয়ে জয়েন করবে।"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHost"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Host Game (হোস্ট করুন)"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnJoin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Join Game (জয়েন করুন)"
+        android:textSize="18sp" />
+
+    <!-- Host options -->
+    <LinearLayout
+        android:id="@+id/hostOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="মোট প্লেয়ার সংখ্যা (Total Players):" />
+
+        <RadioGroup
+            android:id="@+id/radioPlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rb2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" />
+            <RadioButton android:id="@+id/rb3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:layout_marginStart="16dp" />
+            <RadioButton android:id="@+id/rb4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" android:checked="true" android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvHostInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartHost"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="Start Server" />
+    </LinearLayout>
+
+    <!-- Join options -->
+    <LinearLayout
+        android:id="@+id/joinOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="24dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Host IP Address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHostIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConnect"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="Connect" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+</LinearLayout>
